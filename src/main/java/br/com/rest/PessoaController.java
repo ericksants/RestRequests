@@ -1,7 +1,7 @@
 package br.com.rest;
 
 import br.com.rest.entity.Pessoa;
-import br.com.rest.repository.Repository;
+import br.com.rest.repository.PessoaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +15,7 @@ import java.util.Optional;
 @RequestMapping("/req/rest")
 public class PessoaController {
     @Autowired
-    private Repository.PessoaRepository _pessoaRepository;
+    private PessoaRepository _pessoaRepository;
 
     //private static final logger log = LoggerFactory.getLogger(PessoaController.class);
 
