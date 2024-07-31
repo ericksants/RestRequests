@@ -1,9 +1,9 @@
 package br.com.rest.repository;
 
 import br.com.rest.entity.Pessoa;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
 
-
-@org.springframework.stereotype.Repository
-public interface PessoaRepository extends JpaRepository<Pessoa, Long> { }
-
+@Repository
+public interface PessoaRepository extends MongoRepository<Pessoa, String> {
+}

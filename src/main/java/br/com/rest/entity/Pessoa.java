@@ -1,30 +1,51 @@
 package br.com.rest.entity;
 
 
-import jakarta.persistence.*;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
+@Document(collection = "users")
 public class Pessoa {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
 
-    @Column(nullable = false)
-    private String nome;
+    private String Id;
+    private String name;
+    private String email;
+    private String password;
 
-    public long getId() {
-        return id;
+    public Pessoa(String name, String email,String password){
+        this.name = name;
+        this.email = email;
+        this.password = password;
     }
 
-    public String getNome() {
-        return nome;
+    public String getId() {
+        return Id;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setId(String id) {
+        Id = id;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
